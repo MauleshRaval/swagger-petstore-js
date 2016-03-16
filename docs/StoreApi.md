@@ -12,7 +12,8 @@ Method | HTTP request | Description
 [**placeOrder**](StoreApi.md#placeOrder) | **POST** /store/order | Place an order for a pet
 
 
-# **deleteOrder** <a name="deleteOrder"></a>
+<a name="deleteOrder"></a>
+# **deleteOrder**
 > deleteOrder(orderId)
 
 Delete purchase order by ID
@@ -25,7 +26,7 @@ var SwaggerPetstore = require('swagger-petstore');
 
 var api = new SwaggerPetstore.StoreApi()
 
-var orderId = "orderId_example"; // [String] ID of the order that needs to be deleted
+var orderId = "orderId_example"; // {String} ID of the order that needs to be deleted
 
 
 var callback = function(error, data, response) {
@@ -46,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-nil (empty response body)
+null (empty response body)
 
 ### Authorization
 
@@ -57,7 +58,8 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-# **findOrdersByStatus** <a name="findOrdersByStatus"></a>
+<a name="findOrdersByStatus"></a>
+# **findOrdersByStatus**
 > [Order] findOrdersByStatus(opts)
 
 Finds orders by status
@@ -72,19 +74,19 @@ var defaultClient = SwaggerPetstore.ApiClient.default;
 // Configure API key authorization: test_api_client_id
 var test_api_client_id = defaultClient.authentications['test_api_client_id'];
 test_api_client_id.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to nil)
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //test_api_client_id.apiKeyPrefix['x-test_api_client_id'] = "Token"
 
 // Configure API key authorization: test_api_client_secret
 var test_api_client_secret = defaultClient.authentications['test_api_client_secret'];
 test_api_client_secret.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to nil)
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //test_api_client_secret.apiKeyPrefix['x-test_api_client_secret'] = "Token"
 
 var api = new SwaggerPetstore.StoreApi()
 
 var opts = { 
-  'status': "placed" // [String] Status value that needs to be considered for query
+  'status': "placed" // {String} Status value that needs to be considered for query
 };
 
 var callback = function(error, data, response) {
@@ -116,7 +118,8 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-# **getInventory** <a name="getInventory"></a>
+<a name="getInventory"></a>
+# **getInventory**
 > {&#39;String&#39;: &#39;Integer&#39;} getInventory
 
 Returns pet inventories by status
@@ -131,7 +134,7 @@ var defaultClient = SwaggerPetstore.ApiClient.default;
 // Configure API key authorization: api_key
 var api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to nil)
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix['api_key'] = "Token"
 
 var api = new SwaggerPetstore.StoreApi()
@@ -162,7 +165,8 @@ This endpoint does not need any parameter.
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-# **getInventoryInObject** <a name="getInventoryInObject"></a>
+<a name="getInventoryInObject"></a>
+# **getInventoryInObject**
 > Object getInventoryInObject
 
 Fake endpoint to test arbitrary object return by &#39;Get inventory&#39;
@@ -177,7 +181,7 @@ var defaultClient = SwaggerPetstore.ApiClient.default;
 // Configure API key authorization: api_key
 var api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to nil)
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix['api_key'] = "Token"
 
 var api = new SwaggerPetstore.StoreApi()
@@ -208,7 +212,8 @@ This endpoint does not need any parameter.
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-# **getOrderById** <a name="getOrderById"></a>
+<a name="getOrderById"></a>
+# **getOrderById**
 > Order getOrderById(orderId)
 
 Find purchase order by ID
@@ -223,18 +228,18 @@ var defaultClient = SwaggerPetstore.ApiClient.default;
 // Configure API key authorization: test_api_key_query
 var test_api_key_query = defaultClient.authentications['test_api_key_query'];
 test_api_key_query.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to nil)
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //test_api_key_query.apiKeyPrefix['test_api_key_query'] = "Token"
 
 // Configure API key authorization: test_api_key_header
 var test_api_key_header = defaultClient.authentications['test_api_key_header'];
 test_api_key_header.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to nil)
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //test_api_key_header.apiKeyPrefix['test_api_key_header'] = "Token"
 
 var api = new SwaggerPetstore.StoreApi()
 
-var orderId = "orderId_example"; // [String] ID of pet that needs to be fetched
+var orderId = "orderId_example"; // {String} ID of pet that needs to be fetched
 
 
 var callback = function(error, data, response) {
@@ -266,7 +271,8 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-# **placeOrder** <a name="placeOrder"></a>
+<a name="placeOrder"></a>
+# **placeOrder**
 > Order placeOrder(opts)
 
 Place an order for a pet
@@ -281,19 +287,19 @@ var defaultClient = SwaggerPetstore.ApiClient.default;
 // Configure API key authorization: test_api_client_id
 var test_api_client_id = defaultClient.authentications['test_api_client_id'];
 test_api_client_id.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to nil)
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //test_api_client_id.apiKeyPrefix['x-test_api_client_id'] = "Token"
 
 // Configure API key authorization: test_api_client_secret
 var test_api_client_secret = defaultClient.authentications['test_api_client_secret'];
 test_api_client_secret.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to nil)
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //test_api_client_secret.apiKeyPrefix['x-test_api_client_secret'] = "Token"
 
 var api = new SwaggerPetstore.StoreApi()
 
 var opts = { 
-  'body': new SwaggerPetstore.Order() // [Order] order placed for purchasing the pet
+  'body': new SwaggerPetstore.Order() // {Order} order placed for purchasing the pet
 };
 
 var callback = function(error, data, response) {

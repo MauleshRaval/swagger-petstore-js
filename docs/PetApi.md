@@ -17,7 +17,8 @@ Method | HTTP request | Description
 [**uploadFile**](PetApi.md#uploadFile) | **POST** /pet/{petId}/uploadImage | uploads an image
 
 
-# **addPet** <a name="addPet"></a>
+<a name="addPet"></a>
+# **addPet**
 > addPet(opts)
 
 Add a new pet to the store
@@ -36,7 +37,7 @@ petstore_auth.accessToken = "YOUR ACCESS TOKEN"
 var api = new SwaggerPetstore.PetApi()
 
 var opts = { 
-  'body': new SwaggerPetstore.Pet() // [Pet] Pet object that needs to be added to the store
+  'body': new SwaggerPetstore.Pet() // {Pet} Pet object that needs to be added to the store
 };
 
 var callback = function(error, data, response) {
@@ -57,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-nil (empty response body)
+null (empty response body)
 
 ### Authorization
 
@@ -68,7 +69,8 @@ nil (empty response body)
  - **Content-Type**: application/json, application/xml
  - **Accept**: application/json, application/xml
 
-# **addPetUsingByteArray** <a name="addPetUsingByteArray"></a>
+<a name="addPetUsingByteArray"></a>
+# **addPetUsingByteArray**
 > addPetUsingByteArray(opts)
 
 Fake endpoint to test byte array in body parameter for adding a new pet to the store
@@ -87,7 +89,7 @@ petstore_auth.accessToken = "YOUR ACCESS TOKEN"
 var api = new SwaggerPetstore.PetApi()
 
 var opts = { 
-  'body': "B" // [String] Pet object in the form of byte array
+  'body': "B" // {String} Pet object in the form of byte array
 };
 
 var callback = function(error, data, response) {
@@ -108,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-nil (empty response body)
+null (empty response body)
 
 ### Authorization
 
@@ -119,7 +121,8 @@ nil (empty response body)
  - **Content-Type**: application/json, application/xml
  - **Accept**: application/json, application/xml
 
-# **deletePet** <a name="deletePet"></a>
+<a name="deletePet"></a>
+# **deletePet**
 > deletePet(petId, opts)
 
 Deletes a pet
@@ -137,10 +140,10 @@ petstore_auth.accessToken = "YOUR ACCESS TOKEN"
 
 var api = new SwaggerPetstore.PetApi()
 
-var petId = 789; // [Integer] Pet id to delete
+var petId = 789; // {Integer} Pet id to delete
 
 var opts = { 
-  'apiKey': "apiKey_example" // [String] 
+  'apiKey': "apiKey_example" // {String} 
 };
 
 var callback = function(error, data, response) {
@@ -162,7 +165,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-nil (empty response body)
+null (empty response body)
 
 ### Authorization
 
@@ -173,7 +176,8 @@ nil (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-# **findPetsByStatus** <a name="findPetsByStatus"></a>
+<a name="findPetsByStatus"></a>
+# **findPetsByStatus**
 > [Pet] findPetsByStatus(opts)
 
 Finds Pets by status
@@ -192,7 +196,7 @@ petstore_auth.accessToken = "YOUR ACCESS TOKEN"
 var api = new SwaggerPetstore.PetApi()
 
 var opts = { 
-  'status': ["available"] // [[String]] Status values that need to be considered for query
+  'status': ["available"] // {[String]} Status values that need to be considered for query
 };
 
 var callback = function(error, data, response) {
@@ -224,7 +228,8 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-# **findPetsByTags** <a name="findPetsByTags"></a>
+<a name="findPetsByTags"></a>
+# **findPetsByTags**
 > [Pet] findPetsByTags(opts)
 
 Finds Pets by tags
@@ -243,7 +248,7 @@ petstore_auth.accessToken = "YOUR ACCESS TOKEN"
 var api = new SwaggerPetstore.PetApi()
 
 var opts = { 
-  'tags': ["tags_example"] // [[String]] Tags to filter by
+  'tags': ["tags_example"] // {[String]} Tags to filter by
 };
 
 var callback = function(error, data, response) {
@@ -275,7 +280,8 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-# **getPetById** <a name="getPetById"></a>
+<a name="getPetById"></a>
+# **getPetById**
 > Pet getPetById(petId)
 
 Find pet by ID
@@ -294,12 +300,12 @@ petstore_auth.accessToken = "YOUR ACCESS TOKEN"
 // Configure API key authorization: api_key
 var api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to nil)
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix['api_key'] = "Token"
 
 var api = new SwaggerPetstore.PetApi()
 
-var petId = 789; // [Integer] ID of pet that needs to be fetched
+var petId = 789; // {Integer} ID of pet that needs to be fetched
 
 
 var callback = function(error, data, response) {
@@ -331,7 +337,8 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-# **getPetByIdInObject** <a name="getPetByIdInObject"></a>
+<a name="getPetByIdInObject"></a>
+# **getPetByIdInObject**
 > InlineResponse200 getPetByIdInObject(petId)
 
 Fake endpoint to test inline arbitrary object return by &#39;Find pet by ID&#39;
@@ -350,12 +357,12 @@ petstore_auth.accessToken = "YOUR ACCESS TOKEN"
 // Configure API key authorization: api_key
 var api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to nil)
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix['api_key'] = "Token"
 
 var api = new SwaggerPetstore.PetApi()
 
-var petId = 789; // [Integer] ID of pet that needs to be fetched
+var petId = 789; // {Integer} ID of pet that needs to be fetched
 
 
 var callback = function(error, data, response) {
@@ -387,7 +394,8 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-# **petPetIdtestingByteArraytrueGet** <a name="petPetIdtestingByteArraytrueGet"></a>
+<a name="petPetIdtestingByteArraytrueGet"></a>
+# **petPetIdtestingByteArraytrueGet**
 > &#39;String&#39; petPetIdtestingByteArraytrueGet(petId)
 
 Fake endpoint to test byte array return by &#39;Find pet by ID&#39;
@@ -406,12 +414,12 @@ petstore_auth.accessToken = "YOUR ACCESS TOKEN"
 // Configure API key authorization: api_key
 var api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to nil)
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix['api_key'] = "Token"
 
 var api = new SwaggerPetstore.PetApi()
 
-var petId = 789; // [Integer] ID of pet that needs to be fetched
+var petId = 789; // {Integer} ID of pet that needs to be fetched
 
 
 var callback = function(error, data, response) {
@@ -443,7 +451,8 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-# **updatePet** <a name="updatePet"></a>
+<a name="updatePet"></a>
+# **updatePet**
 > updatePet(opts)
 
 Update an existing pet
@@ -462,7 +471,7 @@ petstore_auth.accessToken = "YOUR ACCESS TOKEN"
 var api = new SwaggerPetstore.PetApi()
 
 var opts = { 
-  'body': new SwaggerPetstore.Pet() // [Pet] Pet object that needs to be added to the store
+  'body': new SwaggerPetstore.Pet() // {Pet} Pet object that needs to be added to the store
 };
 
 var callback = function(error, data, response) {
@@ -483,7 +492,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-nil (empty response body)
+null (empty response body)
 
 ### Authorization
 
@@ -494,7 +503,8 @@ nil (empty response body)
  - **Content-Type**: application/json, application/xml
  - **Accept**: application/json, application/xml
 
-# **updatePetWithForm** <a name="updatePetWithForm"></a>
+<a name="updatePetWithForm"></a>
+# **updatePetWithForm**
 > updatePetWithForm(petId, opts)
 
 Updates a pet in the store with form data
@@ -512,11 +522,11 @@ petstore_auth.accessToken = "YOUR ACCESS TOKEN"
 
 var api = new SwaggerPetstore.PetApi()
 
-var petId = "petId_example"; // [String] ID of pet that needs to be updated
+var petId = "petId_example"; // {String} ID of pet that needs to be updated
 
 var opts = { 
-  'name': "name_example", // [String] Updated name of the pet
-  'status': "status_example" // [String] Updated status of the pet
+  'name': "name_example", // {String} Updated name of the pet
+  'status': "status_example" // {String} Updated status of the pet
 };
 
 var callback = function(error, data, response) {
@@ -539,7 +549,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-nil (empty response body)
+null (empty response body)
 
 ### Authorization
 
@@ -550,7 +560,8 @@ nil (empty response body)
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json, application/xml
 
-# **uploadFile** <a name="uploadFile"></a>
+<a name="uploadFile"></a>
+# **uploadFile**
 > uploadFile(petId, opts)
 
 uploads an image
@@ -568,11 +579,11 @@ petstore_auth.accessToken = "YOUR ACCESS TOKEN"
 
 var api = new SwaggerPetstore.PetApi()
 
-var petId = 789; // [Integer] ID of pet to update
+var petId = 789; // {Integer} ID of pet to update
 
 var opts = { 
-  'additionalMetadata': "additionalMetadata_example", // [String] Additional data to pass to server
-  'file': "/path/to/file.txt" // [File] file to upload
+  'additionalMetadata': "additionalMetadata_example", // {String} Additional data to pass to server
+  'file': "/path/to/file.txt" // {File} file to upload
 };
 
 var callback = function(error, data, response) {
@@ -595,7 +606,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-nil (empty response body)
+null (empty response body)
 
 ### Authorization
 
