@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**placeOrder**](StoreApi.md#placeOrder) | **POST** /store/order | Place an order for a pet
 
 
-# **deleteOrder**
+# **deleteOrder** <a name="deleteOrder"></a>
 > deleteOrder(orderId)
 
 Delete purchase order by ID
@@ -25,14 +25,9 @@ var SwaggerPetstore = require('swagger-petstore');
 
 var api = new SwaggerPetstore.StoreApi()
 
-<#usePromises>
-api.deleteOrder(orderId).then(function() {
-  console.log('API called successfully.');
-}, function(error) {
-  console.error(error);
-});
+var orderId = "orderId_example"; // [String] ID of the order that needs to be deleted
 
-</usePromises><^usePromises>
+
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -40,8 +35,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.deleteOrder(orderId<#hasParams>, </hasParams>callback);
-</usePromises>
+api.deleteOrder(orderId, callback);
 ```
 
 ### Parameters
@@ -63,7 +57,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-# **findOrdersByStatus**
+# **findOrdersByStatus** <a name="findOrdersByStatus"></a>
 > [Order] findOrdersByStatus(opts)
 
 Finds orders by status
@@ -86,21 +80,13 @@ var test_api_client_secret = defaultClient.authentications['test_api_client_secr
 test_api_client_secret.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to nil)
 //test_api_client_secret.apiKeyPrefix['x-test_api_client_secret'] = "Token"
-end
 
 var api = new SwaggerPetstore.StoreApi()
 
 var opts = { 
   'status': "placed" // [String] Status value that needs to be considered for query
 };
-<#usePromises>
-api.findOrdersByStatus(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
 
-</usePromises><^usePromises>
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -108,8 +94,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.findOrdersByStatus(opts<#hasParams>, </hasParams>callback);
-</usePromises>
+api.findOrdersByStatus(opts, callback);
 ```
 
 ### Parameters
@@ -131,7 +116,7 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-# **getInventory**
+# **getInventory** <a name="getInventory"></a>
 > {&#39;String&#39;: &#39;Integer&#39;} getInventory
 
 Returns pet inventories by status
@@ -148,17 +133,9 @@ var api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to nil)
 //api_key.apiKeyPrefix['api_key'] = "Token"
-end
 
 var api = new SwaggerPetstore.StoreApi()
-<#usePromises>
-api.getInventory().then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
 
-</usePromises><^usePromises>
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -166,8 +143,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getInventory(<#hasParams>, </hasParams>callback);
-</usePromises>
+api.getInventory(callback);
 ```
 
 ### Parameters
@@ -186,7 +162,7 @@ This endpoint does not need any parameter.
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-# **getInventoryInObject**
+# **getInventoryInObject** <a name="getInventoryInObject"></a>
 > Object getInventoryInObject
 
 Fake endpoint to test arbitrary object return by &#39;Get inventory&#39;
@@ -203,17 +179,9 @@ var api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to nil)
 //api_key.apiKeyPrefix['api_key'] = "Token"
-end
 
 var api = new SwaggerPetstore.StoreApi()
-<#usePromises>
-api.getInventoryInObject().then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
 
-</usePromises><^usePromises>
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -221,8 +189,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getInventoryInObject(<#hasParams>, </hasParams>callback);
-</usePromises>
+api.getInventoryInObject(callback);
 ```
 
 ### Parameters
@@ -241,7 +208,7 @@ This endpoint does not need any parameter.
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-# **getOrderById**
+# **getOrderById** <a name="getOrderById"></a>
 > Order getOrderById(orderId)
 
 Find purchase order by ID
@@ -264,18 +231,12 @@ var test_api_key_header = defaultClient.authentications['test_api_key_header'];
 test_api_key_header.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to nil)
 //test_api_key_header.apiKeyPrefix['test_api_key_header'] = "Token"
-end
 
 var api = new SwaggerPetstore.StoreApi()
 
-<#usePromises>
-api.getOrderById(orderId).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
+var orderId = "orderId_example"; // [String] ID of pet that needs to be fetched
 
-</usePromises><^usePromises>
+
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -283,8 +244,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getOrderById(orderId<#hasParams>, </hasParams>callback);
-</usePromises>
+api.getOrderById(orderId, callback);
 ```
 
 ### Parameters
@@ -306,7 +266,7 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-# **placeOrder**
+# **placeOrder** <a name="placeOrder"></a>
 > Order placeOrder(opts)
 
 Place an order for a pet
@@ -329,21 +289,13 @@ var test_api_client_secret = defaultClient.authentications['test_api_client_secr
 test_api_client_secret.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to nil)
 //test_api_client_secret.apiKeyPrefix['x-test_api_client_secret'] = "Token"
-end
 
 var api = new SwaggerPetstore.StoreApi()
 
 var opts = { 
   'body': new SwaggerPetstore.Order() // [Order] order placed for purchasing the pet
 };
-<#usePromises>
-api.placeOrder(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
 
-</usePromises><^usePromises>
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -351,8 +303,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.placeOrder(opts<#hasParams>, </hasParams>callback);
-</usePromises>
+api.placeOrder(opts, callback);
 ```
 
 ### Parameters

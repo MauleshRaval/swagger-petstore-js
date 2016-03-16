@@ -14,7 +14,7 @@ Method | HTTP request | Description
 [**updateUser**](UserApi.md#updateUser) | **PUT** /user/{username} | Updated user
 
 
-# **createUser**
+# **createUser** <a name="createUser"></a>
 > createUser(opts)
 
 Create user
@@ -30,14 +30,7 @@ var api = new SwaggerPetstore.UserApi()
 var opts = { 
   'body': new SwaggerPetstore.User() // [User] Created user object
 };
-<#usePromises>
-api.createUser(opts).then(function() {
-  console.log('API called successfully.');
-}, function(error) {
-  console.error(error);
-});
 
-</usePromises><^usePromises>
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -45,8 +38,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.createUser(opts<#hasParams>, </hasParams>callback);
-</usePromises>
+api.createUser(opts, callback);
 ```
 
 ### Parameters
@@ -68,7 +60,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-# **createUsersWithArrayInput**
+# **createUsersWithArrayInput** <a name="createUsersWithArrayInput"></a>
 > createUsersWithArrayInput(opts)
 
 Creates list of users with given input array
@@ -84,14 +76,7 @@ var api = new SwaggerPetstore.UserApi()
 var opts = { 
   'body': [new SwaggerPetstore.User()] // [[User]] List of user object
 };
-<#usePromises>
-api.createUsersWithArrayInput(opts).then(function() {
-  console.log('API called successfully.');
-}, function(error) {
-  console.error(error);
-});
 
-</usePromises><^usePromises>
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -99,8 +84,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.createUsersWithArrayInput(opts<#hasParams>, </hasParams>callback);
-</usePromises>
+api.createUsersWithArrayInput(opts, callback);
 ```
 
 ### Parameters
@@ -122,7 +106,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-# **createUsersWithListInput**
+# **createUsersWithListInput** <a name="createUsersWithListInput"></a>
 > createUsersWithListInput(opts)
 
 Creates list of users with given input array
@@ -138,14 +122,7 @@ var api = new SwaggerPetstore.UserApi()
 var opts = { 
   'body': [new SwaggerPetstore.User()] // [[User]] List of user object
 };
-<#usePromises>
-api.createUsersWithListInput(opts).then(function() {
-  console.log('API called successfully.');
-}, function(error) {
-  console.error(error);
-});
 
-</usePromises><^usePromises>
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -153,8 +130,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.createUsersWithListInput(opts<#hasParams>, </hasParams>callback);
-</usePromises>
+api.createUsersWithListInput(opts, callback);
 ```
 
 ### Parameters
@@ -176,7 +152,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-# **deleteUser**
+# **deleteUser** <a name="deleteUser"></a>
 > deleteUser(username)
 
 Delete user
@@ -192,18 +168,12 @@ var defaultClient = SwaggerPetstore.ApiClient.default;
 var test_http_basic = defaultClient.authentications['test_http_basic'];
 test_http_basic.username = 'YOUR USERNAME'
 test_http_basic.password = 'YOUR PASSWORD'
-end
 
 var api = new SwaggerPetstore.UserApi()
 
-<#usePromises>
-api.deleteUser(username).then(function() {
-  console.log('API called successfully.');
-}, function(error) {
-  console.error(error);
-});
+var username = "username_example"; // [String] The name that needs to be deleted
 
-</usePromises><^usePromises>
+
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -211,8 +181,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.deleteUser(username<#hasParams>, </hasParams>callback);
-</usePromises>
+api.deleteUser(username, callback);
 ```
 
 ### Parameters
@@ -234,7 +203,7 @@ nil (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-# **getUserByName**
+# **getUserByName** <a name="getUserByName"></a>
 > User getUserByName(username)
 
 Get user by user name
@@ -247,14 +216,9 @@ var SwaggerPetstore = require('swagger-petstore');
 
 var api = new SwaggerPetstore.UserApi()
 
-<#usePromises>
-api.getUserByName(username).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
+var username = "username_example"; // [String] The name that needs to be fetched. Use user1 for testing.
 
-</usePromises><^usePromises>
+
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -262,8 +226,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getUserByName(username<#hasParams>, </hasParams>callback);
-</usePromises>
+api.getUserByName(username, callback);
 ```
 
 ### Parameters
@@ -285,7 +248,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-# **loginUser**
+# **loginUser** <a name="loginUser"></a>
 > &#39;String&#39; loginUser(opts)
 
 Logs user into the system
@@ -299,17 +262,10 @@ var SwaggerPetstore = require('swagger-petstore');
 var api = new SwaggerPetstore.UserApi()
 
 var opts = { 
-  'username': "username_example" // [String] The user name for login
+  'username': "username_example", // [String] The user name for login
   'password': "password_example" // [String] The password for login in clear text
 };
-<#usePromises>
-api.loginUser(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
 
-</usePromises><^usePromises>
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -317,8 +273,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.loginUser(opts<#hasParams>, </hasParams>callback);
-</usePromises>
+api.loginUser(opts, callback);
 ```
 
 ### Parameters
@@ -341,7 +296,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-# **logoutUser**
+# **logoutUser** <a name="logoutUser"></a>
 > logoutUser
 
 Logs out current logged in user session
@@ -353,14 +308,7 @@ Logs out current logged in user session
 var SwaggerPetstore = require('swagger-petstore');
 
 var api = new SwaggerPetstore.UserApi()
-<#usePromises>
-api.logoutUser().then(function() {
-  console.log('API called successfully.');
-}, function(error) {
-  console.error(error);
-});
 
-</usePromises><^usePromises>
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -368,8 +316,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.logoutUser(<#hasParams>, </hasParams>callback);
-</usePromises>
+api.logoutUser(callback);
 ```
 
 ### Parameters
@@ -388,8 +335,8 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
-# **updateUser**
-> updateUser(usernameopts)
+# **updateUser** <a name="updateUser"></a>
+> updateUser(username, opts)
 
 Updated user
 
@@ -401,17 +348,12 @@ var SwaggerPetstore = require('swagger-petstore');
 
 var api = new SwaggerPetstore.UserApi()
 
+var username = "username_example"; // [String] name that need to be deleted
+
 var opts = { 
   'body': new SwaggerPetstore.User() // [User] Updated user object
 };
-<#usePromises>
-api.updateUser(usernameopts).then(function() {
-  console.log('API called successfully.');
-}, function(error) {
-  console.error(error);
-});
 
-</usePromises><^usePromises>
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -419,8 +361,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.updateUser(usernameopts<#hasParams>, </hasParams>callback);
-</usePromises>
+api.updateUser(username, opts, callback);
 ```
 
 ### Parameters
