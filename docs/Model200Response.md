@@ -1,10 +1,9 @@
-# SwaggerPetstore.Category
+# SwaggerPetstore.Model200Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** |  | [optional] 
-**name** | **String** |  | [optional] 
+**name** | **Integer** |  | [optional] 
 
 
 

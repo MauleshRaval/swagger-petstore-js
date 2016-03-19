@@ -12,6 +12,8 @@ Method | HTTP request | Description
 [**placeOrder**](StoreApi.md#placeOrder) | **POST** /store/order | Place an order for a pet
 
 
+
+
 <a name="deleteOrder"></a>
 # **deleteOrder**
 > deleteOrder(orderId)
@@ -24,7 +26,8 @@ For valid response try integer IDs with value &lt; 1000. Anything above 1000 or 
 ```javascript
 var SwaggerPetstore = require('swagger-petstore');
 
-var api = new SwaggerPetstore.StoreApi()
+
+var apiInstance = new SwaggerPetstore.StoreApi()
 
 var orderId = "orderId_example"; // {String} ID of the order that needs to be deleted
 
@@ -37,6 +40,7 @@ var callback = function(error, data, response) {
   }
 };
 api.deleteOrder(orderId, callback);
+
 ```
 
 ### Parameters
@@ -44,6 +48,7 @@ api.deleteOrder(orderId, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **orderId** | **String**| ID of the order that needs to be deleted | 
+
 
 ### Return type
 
@@ -58,6 +63,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
+
 <a name="findOrdersByStatus"></a>
 # **findOrdersByStatus**
 > [Order] findOrdersByStatus(opts)
@@ -69,6 +75,7 @@ A single status value can be provided as a string
 ### Example
 ```javascript
 var SwaggerPetstore = require('swagger-petstore');
+
 var defaultClient = SwaggerPetstore.ApiClient.default;
 
 // Configure API key authorization: test_api_client_id
@@ -83,7 +90,9 @@ test_api_client_secret.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //test_api_client_secret.apiKeyPrefix['x-test_api_client_secret'] = "Token"
 
-var api = new SwaggerPetstore.StoreApi()
+
+
+var apiInstance = new SwaggerPetstore.StoreApi()
 
 var opts = { 
   'status': "placed" // {String} Status value that needs to be considered for query
@@ -97,6 +106,7 @@ var callback = function(error, data, response) {
   }
 };
 api.findOrdersByStatus(opts, callback);
+
 ```
 
 ### Parameters
@@ -104,6 +114,7 @@ api.findOrdersByStatus(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **status** | **String**| Status value that needs to be considered for query | [optional] [default to placed]
+
 
 ### Return type
 
@@ -118,6 +129,7 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
+
 <a name="getInventory"></a>
 # **getInventory**
 > {&#39;String&#39;: &#39;Integer&#39;} getInventory
@@ -129,6 +141,7 @@ Returns a map of status codes to quantities
 ### Example
 ```javascript
 var SwaggerPetstore = require('swagger-petstore');
+
 var defaultClient = SwaggerPetstore.ApiClient.default;
 
 // Configure API key authorization: api_key
@@ -137,7 +150,9 @@ api_key.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix['api_key'] = "Token"
 
-var api = new SwaggerPetstore.StoreApi()
+
+
+var apiInstance = new SwaggerPetstore.StoreApi()
 
 var callback = function(error, data, response) {
   if (error) {
@@ -147,10 +162,12 @@ var callback = function(error, data, response) {
   }
 };
 api.getInventory(callback);
+
 ```
 
 ### Parameters
 This endpoint does not need any parameter.
+
 
 ### Return type
 
@@ -165,6 +182,7 @@ This endpoint does not need any parameter.
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
+
 <a name="getInventoryInObject"></a>
 # **getInventoryInObject**
 > Object getInventoryInObject
@@ -176,6 +194,7 @@ Returns an arbitrary object which is actually a map of status codes to quantitie
 ### Example
 ```javascript
 var SwaggerPetstore = require('swagger-petstore');
+
 var defaultClient = SwaggerPetstore.ApiClient.default;
 
 // Configure API key authorization: api_key
@@ -184,7 +203,9 @@ api_key.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix['api_key'] = "Token"
 
-var api = new SwaggerPetstore.StoreApi()
+
+
+var apiInstance = new SwaggerPetstore.StoreApi()
 
 var callback = function(error, data, response) {
   if (error) {
@@ -194,10 +215,12 @@ var callback = function(error, data, response) {
   }
 };
 api.getInventoryInObject(callback);
+
 ```
 
 ### Parameters
 This endpoint does not need any parameter.
+
 
 ### Return type
 
@@ -212,6 +235,7 @@ This endpoint does not need any parameter.
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
+
 <a name="getOrderById"></a>
 # **getOrderById**
 > Order getOrderById(orderId)
@@ -223,6 +247,7 @@ For valid response try integer IDs with value &lt;= 5 or &gt; 10. Other values w
 ### Example
 ```javascript
 var SwaggerPetstore = require('swagger-petstore');
+
 var defaultClient = SwaggerPetstore.ApiClient.default;
 
 // Configure API key authorization: test_api_key_query
@@ -237,7 +262,9 @@ test_api_key_header.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //test_api_key_header.apiKeyPrefix['test_api_key_header'] = "Token"
 
-var api = new SwaggerPetstore.StoreApi()
+
+
+var apiInstance = new SwaggerPetstore.StoreApi()
 
 var orderId = "orderId_example"; // {String} ID of pet that needs to be fetched
 
@@ -250,6 +277,7 @@ var callback = function(error, data, response) {
   }
 };
 api.getOrderById(orderId, callback);
+
 ```
 
 ### Parameters
@@ -257,6 +285,7 @@ api.getOrderById(orderId, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **orderId** | **String**| ID of pet that needs to be fetched | 
+
 
 ### Return type
 
@@ -271,6 +300,7 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
 
+
 <a name="placeOrder"></a>
 # **placeOrder**
 > Order placeOrder(opts)
@@ -282,6 +312,7 @@ Place an order for a pet
 ### Example
 ```javascript
 var SwaggerPetstore = require('swagger-petstore');
+
 var defaultClient = SwaggerPetstore.ApiClient.default;
 
 // Configure API key authorization: test_api_client_id
@@ -296,7 +327,9 @@ test_api_client_secret.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //test_api_client_secret.apiKeyPrefix['x-test_api_client_secret'] = "Token"
 
-var api = new SwaggerPetstore.StoreApi()
+
+
+var apiInstance = new SwaggerPetstore.StoreApi()
 
 var opts = { 
   'body': new SwaggerPetstore.Order() // {Order} order placed for purchasing the pet
@@ -310,6 +343,7 @@ var callback = function(error, data, response) {
   }
 };
 api.placeOrder(opts, callback);
+
 ```
 
 ### Parameters
@@ -317,6 +351,7 @@ api.placeOrder(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**Order**](Order.md)| order placed for purchasing the pet | [optional] 
+
 
 ### Return type
 
@@ -330,4 +365,6 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
+
+
 

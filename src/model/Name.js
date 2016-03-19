@@ -14,46 +14,58 @@
   }
 }(this, function(ApiClient) {
   'use strict';
-  
-  
-  var Name = function Name() { 
-    
+
+  /**
+   * The Name model module.
+   * @module model/Name
+   * @version 1.0.0
+   */
+
+  /**
+   * Constructs a new <code>Name</code>.
+   * @alias module:model/Name
+   * @class
+   */
+  var exports = function() {
+
+
+
   };
 
-  Name.constructFromObject = function(data) {
-    if (!data) {
-      return null;
-    }
-    var _this = new Name();
-    
-    if (data['name']) {
-      _this['name'] = ApiClient.convertToType(data['name'], 'Integer');
-    }
-    
-    return _this;
-  }
-
-  
-  
   /**
-   * @return {Integer}
-   **/
-  Name.prototype.getName = function() {
-    return this['name'];
+   * Constructs a <code>Name</code> from a plain JavaScript object, optionally creating a new instance.
+   * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+   * @param {Object} data The plain JavaScript object bearing properties of interest.
+   * @param {module:model/Name} obj Optional instance to populate.
+   * @return {module:model/Name} The populated <code>Name</code> instance.
+   */
+  exports.constructFromObject = function(data, obj) {
+    if (data) { 
+      obj = obj || new exports();
+
+      if (data.hasOwnProperty('name')) {
+        obj['name'] = ApiClient.convertToType(data['name'], 'Integer');
+      }
+      if (data.hasOwnProperty('snake_case')) {
+        obj['snake_case'] = ApiClient.convertToType(data['snake_case'], 'Integer');
+      }
+    }
+    return obj;
   }
+
 
   /**
-   * @param {Integer} name
-   **/
-  Name.prototype.setName = function(name) {
-    this['name'] = name;
-  }
-  
-  
+   * @member {Integer} name
+   */
+  exports.prototype['name'] = undefined;
 
-  
+  /**
+   * @member {Integer} snake_case
+   */
+  exports.prototype['snake_case'] = undefined;
 
-  return Name;
-  
-  
+
+
+
+  return exports;
 }));
